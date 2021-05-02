@@ -474,7 +474,9 @@ a.select {
 }
 
 .client-svg {
-  color: #afb1b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .client .client-svg:hover,
 .client .client-svg:focus {
@@ -494,15 +496,6 @@ a.select {
 .section-footer:not(:last-child) {
   margin-right: 70px;
 }
-/* .adress-footer {
-  padding-top: 60px;
-  padding-bottom: 6o;
-}
-
-.soc-icon {
-  padding-top: 72px;
-  padding-bottom: 100px;
-} */
 
 .dark-bg .list {
   flex-direction: column;
