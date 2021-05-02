@@ -690,7 +690,8 @@ a.select {
 }
 
 .icon-svg {
-  fill: var(--icons-cl);
+  width: 20px;
+  height: 20px;
 }
 
 .icon-svg:hover,
