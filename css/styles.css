@@ -313,15 +313,12 @@ a.select {
 }
 
 .icon {
-  fill: var(--title-cl);
-}
-.icon:hover {
-  fill: var(--accent-cl);
+  fill: var(--alt-title-cl);
 }
 
 .icon:hover,
 .icon:focus {
-  fill: var(--accent-cl);
+  fill: var(--alt-title-cl);
 }
 
 .menu-features:not(:last-child) {
@@ -518,6 +515,11 @@ a.select {
   text-transform: uppercase;
   padding-bottom: 20px;
   color: var(--alt-title-cl);
+}
+
+li .social:hover,
+li .social:focus {
+  background-color: var(--accent-bg);
 }
 
 .list-footer {
