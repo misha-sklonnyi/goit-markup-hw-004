@@ -30,6 +30,8 @@ html {
   --bg-img: #c4c4c4;
   --bg-icon: #f5f4fa;
 
+  --icon-footer-bg: rgba(255, 255, 255, 0.1);
+
   --over-index-img: rgba(47, 48, 58, 0.4);
 
   --border-por-box: rgba(238, 238, 238, 1);
@@ -94,26 +96,20 @@ p {
 }
 
 .accent-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--main-text-cl);
   text-decoration: none;
 }
-.mail {
-  align-items: center;
+
+.icon-header {
   margin-right: 10px;
-  fill: var(--main-text-cl);
-}
-.mail:hover,
-.mail:focus {
-  fill: var(--accent-cl);
-}
-.phone {
-  align-items: center;
-  margin-right: 10px;
-  fill: var(--main-text-cl);
+  fill: var(--icons-cl);
 }
 
-.link > .phone:hover,
-.link > .phone:focus {
+.icon-header:hover,
+.icon-header:focus {
   fill: var(--accent-cl);
 }
 
@@ -289,9 +285,6 @@ a.select {
   color: var(--alt-title-cl);
 }
 
-.priority {
-  margin-top: 94px;
-}
 .list > .lable-hang:not(:last-child) {
   margin-right: 30px;
 }
@@ -299,16 +292,28 @@ a.select {
 .hide {
   display: none;
 }
-.priority-icon {
-  width: 270px;
-  height: 120px;
-  padding-right: 100px;
-  padding-left: 100px;
+.priority-svg {
+  fill: var(--title-cl);
+}
+
+.priority-svg:hover,
+.priority-svg:focus {
+  fill: var(--accent-cl);
+}
+
+.bt-priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--team-bg);
   border-radius: 4px;
+  border: none;
+  width: 270px;
+  height: 120px;
 }
-.priority-icon:hover,
-.priority-icon:focus {
+
+.bt-priority:hover,
+.bt-priority:focus {
   border: 2px solid var(--title-cl);
 }
 
@@ -339,6 +344,10 @@ a.select {
   line-height: 1.17;
   text-align: center;
   color: var(--title-cl);
+}
+
+.our-work {
+  padding-bottom: 94px;
 }
 
 .work-item:not(:last-child) {
@@ -382,6 +391,12 @@ a.select {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.team-title {
+  margin-top: 30px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+}
 
 .dark-bg {
   background-color: var(--dark-bg);
@@ -414,10 +429,8 @@ a.select {
   color: var(--main-text-cl);
 }
 
-.team-icon {
-  margin: 0;
-  padding: 0;
-  margin: 16px 32px 30px;
+.link-action > li:not(:last-child) {
+  margin-right: 10px;
 }
 
 .list .team {
@@ -469,19 +482,23 @@ a.select {
   border: 1px solid var(--accent-cl);
 }
 
-.client-svg {
+.bt-client {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+  background: inherit;
+  border-radius: 4px;
+  border: none;
+  width: 170px;
+  height: 90px;
 }
 
-.client .client-svg:hover,
-.client .client-svg:focus {
+.client-svg {
+  fill: var(--icons-cl);
+}
+
+.client-svg:hover,
+.client-svg:focus {
   fill: var(--accent-cl);
 }
 
@@ -551,7 +568,70 @@ li .social:focus {
   margin: 0;
   padding: 0;
 }
-.link-footer .social:not(:last-child) {
+
+.link-action {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-social {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  background-color: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-social:hover,
+.icon-social:focus {
+  background-color: var(--accent-bg);
+}
+.link-action .icon-social:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-cl);
+}
+
+.icon-svg:hover,
+.icon-svg:focus {
+  fill: var(--alt-title-cl);
+}
+.social-footer {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 50%;
+  background-color: inherit;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--icon-footer-bg);
+  fill: var(--alt-title-cl);
+}
+
+.social-footer:hover,
+.social-footer:focus {
+  background-color: var(--accent-bg);
+}
+
+.link-footer > li:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -636,9 +716,13 @@ li .social:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.active-all {
+  color: var(--alt-title-cl);
+  background-color: var(--accent-bg);
+}
 
 .portfolio-title {
-  padding-top: 20px;
+  margin-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -660,85 +744,4 @@ li .social:focus {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--main-text-cl);
-}
-.link-action {
-  display: flex;
-  margin-right: 0;
-  margin-left: 0;
-  list-style: none;
-  margin-top: 16px;
-  padding-bottom: 30px;
-  padding-right: 32px;
-  padding-left: 32px;
-}
-
-.icon-social {
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  border-radius: 50%;
-  background-size: 12px;
-  background-color: inherit;
-}
-
-.icon-social:hover,
-.icon-social:focus {
-  background-color: var(--accent-bg);
-}
-
-.icon-svg {
-  width: 20px;
-  height: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-svg:hover,
-.icon-svg:focus {
-  fill: var(--alt-title-cl);
-}
-
-.icon-linkedin {
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../images/icon.svg/linkedin.svg);
-}
-.icon-linkedin:hover,
-.icon-linkedin:focus {
-  background-color: var(--accent-bg);
-}
-
-.icon-facebook {
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../images/icon.svg/facebook.svg);
-}
-.icon-facebook:hover,
-.icon-facebook:focus {
-  background-color: var(--accent-bg);
-}
-
-.icon-twitter {
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../images/icon.svg/twitter.svg);
-}
-
-.icon-twitter:hover,
-.icon-twitter:focus {
-  background-color: var(--accent-bg);
-}
-
-.icon-instagram {
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: url(../images/icon.svg/instagram.svg);
-}
-
-.icon-instagram:hover,
-.icon-instagram:focus {
-  background-color: var(--accent-bg);
-}
-
-.link-action .social:not(:last-child) {
-  margin-right: 10px;
 }
