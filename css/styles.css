@@ -458,7 +458,6 @@ a.select {
   border-radius: 4px;
   justify-content: center;
   text-align: center;
-  padding-top: 22px;
 }
 
 .list .client:not(:last-child) {
