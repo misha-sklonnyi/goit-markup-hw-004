@@ -95,11 +95,6 @@ p {
   color: var(--accent-cl);
 }
 
-.accent-nav:hover .icon-header,
-.accent-nav:focus .icon-header {
-  fill: var(--accent-cl);
-}
-
 .accent-nav {
   display: flex;
   justify-content: center;
@@ -487,11 +482,6 @@ a.select {
   border: 1px solid var(--accent-cl);
 }
 
-.client:hover .client-svg,
-.client:focus .client-svg {
-  fill: var(--accent-cl);
-}
-
 .bt-client {
   display: flex;
   justify-content: center;
@@ -499,8 +489,6 @@ a.select {
   background: inherit;
   border-radius: 4px;
   border: none;
-  margin: 0;
-  padding: 0;
   width: 170px;
   height: 90px;
 }
@@ -607,31 +595,22 @@ li .social:focus {
 .icon-social:focus {
   background-color: var(--accent-bg);
 }
-
-.icon-social:hover .icon-svg,
-.icon-social:focus .icon-svg {
-  fill: var(--alt-title-cl);
-}
-
 .link-action .icon-social:not(:last-child) {
   margin-right: 10px;
 }
 
 .icon-svg {
+  width: 20px;
+  height: 20px;
   justify-content: center;
   align-items: center;
   fill: var(--icons-cl);
 }
 
-.icon-svg:hover {
+.icon-svg:hover,
+.icon-svg:focus {
   fill: var(--alt-title-cl);
 }
-
-.conteiner-footer {
-  display: flex;
-  padding: 0 15px;
-}
-
 .social-footer {
   display: flex;
   width: 44px;
@@ -743,11 +722,10 @@ li .social:focus {
 }
 
 .portfolio-title {
-  /* padding-top: 20px;
+  margin-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
-  padding-left: 24px; */
-  padding: 20px 24px;
+  padding-left: 24px;
 }
 
 .section-title-pf {
